@@ -1,6 +1,5 @@
 import Cookies from "js-cookie";
-
-import { STORAGE_KEYS } from "../../src/constants";
+import { STORAGE_KEYS } from "../constants";
 
 const DEFAULT_COUNTRY = process.env.GXP_DEFAULT_COUNTRY;
 const DEFAULT_BRAND = process.env.GXP_DEFAULT_BRAND;
