@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/jkdrangel/gxp-core-utils/compare/v1.2.0...v1.3.0) (2021-11-30)
+
+
+### Features
+
+* **gxp:** update build ([e6811eb](https://github.com/jkdrangel/gxp-core-utils/commit/e6811eb749241d4d8ca13be82a58ef037c761a0a))
+
 ## [1.2.0](https://github.com/jkdrangel/gxp-core-utils/compare/v1.1.0...v1.2.0) (2021-11-30)
 
 
