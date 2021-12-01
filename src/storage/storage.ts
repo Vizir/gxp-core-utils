@@ -1,4 +1,5 @@
-import Cookies from "js-cookie";
+import Cookies, { CookieChangeListener } from "universal-cookie";
+
 import { STORAGE_KEYS } from "../constants";
 
 const DEFAULT_COUNTRY = process.env.GXP_DEFAULT_COUNTRY;
@@ -17,9 +18,10 @@ const cookiesToKeep = [
   STORAGE_KEYS.LANGUAGE,
 ];
 
+const cookies = new Cookies();
 export class Storage {
   public static getData(key: string): string {
-    const value = Cookies.get(key) || "";
+    const value = cookies.get(key) || "";
     if (value === "" && defaults[key]) {
       return defaults[key] ?? "";
     }
@@ -28,18 +30,22 @@ export class Storage {
 
   public static setData(key: string, value: unknown): void {
     const jsonValue = typeof value === "string" ? value : JSON.stringify(value);
-    Cookies.set(key, jsonValue);
+    cookies.set(key, jsonValue);
   }
 
   public static removeData(key: string): void {
-    Cookies.remove(key);
+    cookies.remove(key);
   }
 
   public static removeAll(): void {
-    Object.keys(Cookies.get()).forEach((key) => {
+    Object.keys(cookies.getAll()).forEach((key) => {
       if (!cookiesToKeep.includes(key)) {
         this.removeData(key);
       }
     });
+  }
+
+  public static addListener(callback: CookieChangeListener): void {
+    cookies.addChangeListener(callback);
   }
 }
