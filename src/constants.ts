@@ -30,4 +30,6 @@ export const STORAGE_KEYS = {
   COMMERCIAL_STRUCTURE_NAME: "commercial_structure_name",
   USER_MANAGEMENT_ID: "user_management_id",
   USER_MANAGEMENT_NAME: "user_management_name",
+  PAGE_TITLE: "page_title",
+  PAGE_KEY: "page_key",
 };
