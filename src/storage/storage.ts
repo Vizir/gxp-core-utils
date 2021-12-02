@@ -18,10 +18,16 @@ const cookiesToKeep = [
   STORAGE_KEYS.LANGUAGE,
 ];
 
-const cookies = new Cookies();
+// const cookies = new Cookies();
 export class Storage {
+  static cookies: Cookies;
+
+  public static initialize(cookies: Cookies = new Cookies()): void {
+    this.cookies = cookies;
+  }
+
   public static getData(key: string): string {
-    const value = cookies.get(key) || "";
+    const value = this.cookies.get(key) || "";
     if (value === "" && defaults[key]) {
       return defaults[key] ?? "";
     }
@@ -30,15 +36,15 @@ export class Storage {
 
   public static setData(key: string, value: unknown): void {
     const jsonValue = typeof value === "string" ? value : JSON.stringify(value);
-    cookies.set(key, jsonValue);
+    this.cookies.set(key, jsonValue);
   }
 
   public static removeData(key: string): void {
-    cookies.remove(key);
+    this.cookies.remove(key);
   }
 
   public static removeAll(): void {
-    Object.keys(cookies.getAll()).forEach((key) => {
+    Object.keys(this.cookies.getAll()).forEach((key) => {
       if (!cookiesToKeep.includes(key)) {
         this.removeData(key);
       }
@@ -46,6 +52,6 @@ export class Storage {
   }
 
   public static addListener(callback: CookieChangeListener): void {
-    cookies.addChangeListener(callback);
+    this.cookies.addChangeListener(callback);
   }
 }
