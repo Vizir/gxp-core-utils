@@ -27,6 +27,7 @@ export class Storage {
   }
 
   public static getData(key: string): string {
+    if (!this.cookies) this.initialize();
     const value = this.cookies.get(key) || "";
     if (value === "" && defaults[key]) {
       return defaults[key] ?? "";
@@ -35,15 +36,18 @@ export class Storage {
   }
 
   public static setData(key: string, value: unknown): void {
+    if (!this.cookies) this.initialize();
     const jsonValue = typeof value === "string" ? value : JSON.stringify(value);
     this.cookies.set(key, jsonValue);
   }
 
   public static removeData(key: string): void {
+    if (!this.cookies) this.initialize();
     this.cookies.remove(key);
   }
 
   public static removeAll(): void {
+    if (!this.cookies) this.initialize();
     Object.keys(this.cookies.getAll()).forEach((key) => {
       if (!cookiesToKeep.includes(key)) {
         this.removeData(key);
@@ -52,6 +56,7 @@ export class Storage {
   }
 
   public static addListener(callback: CookieChangeListener): void {
+    if (!this.cookies) this.initialize();
     this.cookies.addChangeListener(callback);
   }
 }
