@@ -18,7 +18,6 @@ const cookiesToKeep = [
   STORAGE_KEYS.LANGUAGE,
 ];
 
-// const cookies = new Cookies();
 export class Storage {
   static cookies: Cookies;
 
