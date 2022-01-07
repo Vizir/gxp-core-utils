@@ -22,7 +22,8 @@
     "doc:html": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out build/docs",
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --json build/docs/typedoc.json",
     "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "rm -rf node_modules && rm -rf src/*/node_modules"
   },
   "engines": {
     "node": ">=14"
@@ -31,6 +32,7 @@
     "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
+    "firebase": "^8.6.7",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@types/node": "^16.11.11",
