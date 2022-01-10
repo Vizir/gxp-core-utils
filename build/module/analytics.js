@@ -1,0 +1,11 @@
+import app from "firebase/app";
+import "firebase/analytics";
+let firebaseAnalytics;
+export const initializeFirebase = (firebaseConfig) => {
+    app.initializeApp(firebaseConfig);
+    firebaseAnalytics = app.analytics();
+};
+export const logEvent = (message) => {
+    firebaseAnalytics.logEvent(message);
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYW5hbHl0aWNzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2FuYWx5dGljcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEdBQUcsTUFBTSxjQUFjLENBQUM7QUFFL0IsT0FBTyxvQkFBb0IsQ0FBQztBQVk1QixJQUFJLGlCQUEwQyxDQUFDO0FBRS9DLE1BQU0sQ0FBQyxNQUFNLGtCQUFrQixHQUFHLENBQUMsY0FBcUMsRUFBRSxFQUFFO0lBQzFFLEdBQUcsQ0FBQyxhQUFhLENBQUMsY0FBYyxDQUFDLENBQUM7SUFDbEMsaUJBQWlCLEdBQUcsR0FBRyxDQUFDLFNBQVMsRUFBRSxDQUFDO0FBQ3RDLENBQUMsQ0FBQztBQUVGLE1BQU0sQ0FBQyxNQUFNLFFBQVEsR0FBRyxDQUFDLE9BQWUsRUFBRSxFQUFFO0lBQzFDLGlCQUFpQixDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsQ0FBQztBQUN0QyxDQUFDLENBQUMifQ==
