@@ -5,6 +5,7 @@ export declare const STORAGE_KEYS: {
     TOKEN: string;
     IFRAME_URL: string;
     ACCESS_TOKEN: string;
+    REFRESH_TOKEN: string;
     EXPIRES_IN: string;
     EXPIRE_SSO_TOKEN: string;
     SSO_TOKEN: string;
