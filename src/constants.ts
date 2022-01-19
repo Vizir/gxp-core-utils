@@ -8,6 +8,7 @@ export const STORAGE_KEYS = {
   TOKEN: "token",
   IFRAME_URL: "iframe_url",
   ACCESS_TOKEN: "access_token",
+  REFRESH_TOKEN: "refresh_token",
   EXPIRES_IN: "expiresIn",
   EXPIRE_SSO_TOKEN: "expire_sso_token",
   SSO_TOKEN: "sso_token",
