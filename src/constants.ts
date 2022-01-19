@@ -1,3 +1,5 @@
+import { CountriesUriType } from "./types";
+
 export const HOURS_IN_MS = 3600000;
 export const SIX_MIN_IN_MS = 360000;
 export const DAY_IN_MS = 86400000;
@@ -32,4 +34,12 @@ export const STORAGE_KEYS = {
   USER_MANAGEMENT_NAME: "user_management_name",
   PAGE_TITLE: "page_title",
   PAGE_KEY: "page_key",
+};
+
+export const countriesUri: CountriesUriType = {
+  AR: "https://minegocio.naturacosmeticos.com.ar",
+  PE: "https://minegocio.natura.com.pe",
+  MX: "https://minegocio.natura.com.mx",
+  CL: "https://minegocio.natura.cl",
+  CO: "https://minegocio.natura.com.co",
 };
