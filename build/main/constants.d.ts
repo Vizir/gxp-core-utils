@@ -1,3 +1,4 @@
+import { CountriesUriType } from "./types";
 export declare const HOURS_IN_MS = 3600000;
 export declare const SIX_MIN_IN_MS = 360000;
 export declare const DAY_IN_MS = 86400000;
@@ -32,3 +33,4 @@ export declare const STORAGE_KEYS: {
     PAGE_TITLE: string;
     PAGE_KEY: string;
 };
+export declare const countriesUri: CountriesUriType;
