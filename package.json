@@ -1,6 +1,6 @@
 {
   "name": "gxp-core-utils",
-  "version": "1.4.4",
+  "version": "1.4.7",
   "description": "Core utilities shared between children of gxp",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -21,30 +21,27 @@
     "doc": "run-s doc:html && open-cli build/docs/index.html",
     "doc:html": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out build/docs",
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --json build/docs/typedoc.json",
-    "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs",
     "prepare": "husky install"
   },
   "engines": {
     "node": ">=14"
   },
   "dependencies": {
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "firebase": "^8.6.7"
   },
   "devDependencies": {
-    "firebase": "^8.6.7",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@types/node": "^16.11.11",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "codecov": "^3.5.0",
-    "cspell": "^4.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.0",
-    "gh-pages": "^3.1.0",
     "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
     "open-cli": "^6.0.1",
