@@ -3,3 +3,4 @@ export { nextDay, nextDayInMS } from './date';
 export { getInitials } from './getInitials';
 export { Storage } from './storage/storage';
 export { FirebaseAnalytics } from './analytics/analytics';
+export { getWebUri } from './getWebUri';
