@@ -35,6 +35,7 @@ export const STORAGE_KEYS = {
   USER_MANAGEMENT_NAME: "user_management_name",
   PAGE_TITLE: "page_title",
   PAGE_KEY: "page_key",
+  USER_PREVIOUS_CODE: "user_previous_code"
 };
 
 export const countriesUri: CountriesUriType = {

@@ -33,5 +33,6 @@ export declare const STORAGE_KEYS: {
     USER_MANAGEMENT_NAME: string;
     PAGE_TITLE: string;
     PAGE_KEY: string;
+    USER_PREVIOUS_CODE: string;
 };
 export declare const countriesUri: CountriesUriType;
